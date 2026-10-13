@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Borade Family Resources Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Borade Family Resources Management</h1>
+      <button id="nav-toggle" class="nav-toggle">☰</button>
+      <nav id="main-nav" class="main-nav">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#family">Family</a>
+        <a href="#finance">Income & Expenses</a>
+        <a href="#inventory">Household Inventory</a>
+        <a href="#savings">Savings Goals</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="dashboard" class="section">
+      <h2>Home Dashboard</h2>
+      <div class="grid cards">
+        <div class="card">
+          <h3>Monthly Summary</h3>
+          <p>Total Income: <strong id="total-income">₹0</strong></p>
+          <p>Total Expenses: <strong id="total-expenses">₹0</strong></p>
+          <p>Balance: <strong id="balance">₹0</strong></p>
+        </div>
+        <div class="card">
+          <h3>Upcoming Bills (Demo)</h3>
+          <ul class="simple-list">
+            <li>Electricity - ₹2,500 - Due 2026-10-20</li>
+            <li>Water - ₹300 - Due 2026-10-25</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Quick Actions</h3>
+          <button class="btn" onclick="scrollToSection('finance')">Add Expense</button>
+          <button class="btn ghost" onclick="scrollToSection('inventory')">Add Item</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="family" class="section">
+      <h2>Family Members</h2>
+      <div id="family-list" class="cards small-cards">
+        <!-- Family members rendered here -->
+      </div>
+      <div class="card form-card">
+        <h4>Add Family Member (demo)</h4>
+        <input id="member-name" placeholder="Name" />
+        <input id="member-role" placeholder="Role (e.g., Parent, Child)" />
+        <button class="btn" id="add-member">Add Member</button>
+      </div>
+    </section>
+
+    <section id="finance" class="section">
+      <h2>Monthly Income & Expenses</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Add Income</h3>
+          <input id="income-desc" placeholder="Source (Salary, Other)" />
+          <input id="income-amount" placeholder="Amount" type="number" />
+          <button class="btn" id="add-income">Add Income</button>
+        </div>
+
+        <div class="card">
+          <h3>Add Expense</h3>
+          <input id="expense-desc" placeholder="Description" />
+          <input id="expense-amount" placeholder="Amount" type="number" />
+          <input id="expense-date" type="date" />
+          <button class="btn" id="add-expense">Add Expense</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Expenses</h3>
+        <ul id="expenses-list" class="list"></ul>
+      </div>
+    </section>
+
+    <section id="inventory" class="section">
+      <h2>Household Resources Inventory</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Add Item</h3>
+          <input id="item-name" placeholder="Item Name" />
+          <input id="item-qty" placeholder="Quantity" type="number" />
+          <input id="item-note" placeholder="Notes (optional)" />
+          <button class="btn" id="add-item">Add Item</button>
+        </div>
+
+        <div class="card">
+          <h3>Inventory</h3>
+          <ul id="items-list" class="list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="savings" class="section">
+      <h2>Savings Goals</h2>
+      <div id="savings-list" class="cards small-cards">
+        <!-- Goals rendered here -->
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="card form-card">
+        <p>If you need help, fill the form below (demo). This does not send real messages.</p>
+        <input placeholder="Your name" />
+        <input placeholder="Your email" />
+        <textarea placeholder="Message" rows="4"></textarea>
+        <button class="btn">Save Message (demo)</button>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>© Borade Family Resources Management — Demo site. No real personal or banking data is stored.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
